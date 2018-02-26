@@ -1,0 +1,1074 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to HTML/CSS - Class 3</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gdi.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+				<section>
+		          <img src="images/circle-gdi-logo.png" alt="GDI Logo" class="noborder">
+		          <h1>Intro to HTML/CSS</h1>
+		          <h3>Class 3</h3>
+		        </section>
+		        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		        <section data-background-color="#ee5159" class="inverse">
+					<h1>QUIZ</h1>
+				</section>
+
+				<section>
+					<h2>Question 1</h2>
+					<p>What does a complete paragraph element look like?</p>
+						
+					<p style="display:inline;"><strong class="pink">A ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+							&lt;t&gt;This is a paragraph.&lt;/t&gt;
+						</code></pre></p>
+					<p style="display:inline;"><strong class="pink">B ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+							&lt;p&gt;This is a paragraph.&lt;/p&gt;
+						</code></pre></p>
+					<p style="display:inline;"><strong class="pink">C ) </strong><pre class="css" style="font-size: 20px; width: 550px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+							&lt;paragraph&gt;This is a paragraph.&lt;/paragraph&gt;
+						</code></pre></p>
+					<p style="display:inline;"><strong class="pink">D ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+							(p)This is a paragraph.(/p)
+						</code></pre></p>
+				</section>
+
+				<section data-transition="none">
+					<h2>Question 1</h2>
+					<p>What does a complete paragraph element look like?</p>
+						
+					<p style="display:inline; opacity: 0.1;"><strong class="pink">A ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px; opacity: 0.1;"><code data-trim>
+							&lt;t&gt;This is a paragraph.&lt;/t&gt;
+						</code></pre></p>
+					<p style="display:inline;"><strong class="pink">B ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+							&lt;p&gt;This is a paragraph.&lt;/p&gt;
+						</code></pre></p>
+					<p style="display:inline; opacity: 0.1;"><strong class="pink">C ) </strong><pre class="css" style="font-size: 20px; width: 550px; display:inline-block; margin-left:10px;margin-bottom:0px; opacity: 0.1;"><code data-trim>
+							&lt;paragraph&gt;This is a paragraph.&lt;/paragraph&gt;
+						</code></pre></p>
+					<p style="display:inline; opacity: 0.1;"><strong class="pink">D ) </strong><pre class="css" style="font-size: 20px; width: 350px; display:inline-block; margin-left:10px;margin-bottom:0px; opacity: 0.1;"><code data-trim>
+							(p)This is a paragraph.(/p)
+						</code></pre></p>
+				</section>
+
+				<section>
+					<h2>Question 2</h2>
+					<p>When using CSS to target an element with an ID, the selector is a _____.</p>
+				</section>
+
+				<section data-transition="none">
+					<h2>Question 2</h2>
+					<p>When using CSS to target an element with an ID, the selector is a <strong class="pink">#</strong>.</p>
+				</section>
+
+				<section>
+					<h2>Question 3</h2>
+					<p>What CSS selector would be used to target the word "Cookie" in the HTML?</p>
+					<div class="half">
+						<p>HTML</p>
+					<pre style="font-size: 18px; width: 100%;"><code class="html" data-trim>
+						<p>Kaitlin baked the following:</p>
+						<ul>
+						  <li>Biscottis</li>
+						  <li>Muffins</li>
+						  <li><strong>Cookies</strong></li>
+						  <li>Cakes</li>
+						</ul>
+						</code></pre>
+					</div>
+					<div class="half fragment fade-up">
+						<p>CSS</p>
+					<pre style="font-size: 18px; width: 100%;"><code class="css" data-trim>
+						ul li strong {
+
+						}
+						</code></pre>
+					</div>
+				</section>
+
+				<section>
+					<h2>Question 4</h2>
+					<p>Name 2 ways to delcare a color in CSS</p>
+					<p class="pink fragment fade-up"><strong>Standard</strong></p>
+					<p class="pink fragment fade-up"><strong>Hexadecimal</strong></p>
+					<p class="pink fragment fade-up"><strong>RGB</strong></p>
+					<p class="pink fragment fade-up"><strong>RGBa</strong></p>
+					<p class="pink fragment fade-up"><strong>HSL</strong></p>
+				</section>
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+				<section data-background-color="#ee5159" class="inverse">
+					<h1>USING CSS</h1>
+				</section>
+
+				<section>
+					<h2>Positioning Elements</h2>
+					<div class="half">
+						<p style="font-size: 30px; text-align: left;">So far we have encountered <strong class="pink">block</strong> elements. They appear on the next line, like paragraphs.</p>
+						<p style="font-size: 30px; text-align: left;">There are also <strong class="pink">inline</strong> elements. They appear on the same line that they are written on.</p>
+					</div>
+					<div class="half">
+						<img class="shadow rounded" style="width: 300px;" src="images/inline-block.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>Block vs Inline Elements</h2>
+					<p>CSS divides HTML into these two elements.</p>
+					<p>You can imagine block-level elements always rendering on a new line.</p>
+					<hr>
+					<p style="font-size: 30px;"><strong class="pink">Inline Elements: </strong><code>img, a, br, em, strong</code></p>
+					<p style="font-size: 30px;"><strong class="pink">Block Elements: </strong><code>p, h1, ul, li</code> (and almost everything else)</p>
+				</section>
+
+				<section>
+					<h2>Grouping Elements with DIVs</h2>
+					<p style="font-size: 30px;"><strong class="pink">Question:</strong> What if you wanted to apply a background color<br /> to around some paragraphs?</p>
+					
+					<p style="font-size: 30px;" class="fragment fade-up"><strong class="pink">Answer: </strong>It would be impossible to wrap a border around multiple paragraphs by targetting individual paragraphs.</p>
+				
+				</section>
+
+				<section>
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 13px;"><code class="html" data-trim>
+						&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+						  &lt;head&gt;
+						    &lt;link rel="stylesheet" 
+						    type="text/css" 
+						    href="style.css"&gt;
+						  &lt;/head&gt;
+						  &lt;body&gt;
+					      <p>This would be an 
+					      introduction paragraph 
+					      about introducing 
+					      things.</p>
+					      <p>Some important things
+					      to note:</p>
+				       <ol>
+			          <li>Thing 1</li>
+			          <li>Thing 2</li>
+			          <li>Thing 3</li>
+			          <li>Thing 4</li>
+				       </ol>
+						  &lt;/body&gt;
+						&lt;/html&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-redborder.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.highlight {
+						  background-color: red;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 13px;"><code class="html" data-trim>
+						&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+						  &lt;head&gt;
+						    &lt;link rel="stylesheet" 
+						    type="text/css" 
+						    href="style.css"&gt;
+						  &lt;/head&gt;
+						  &lt;body&gt;
+					      <p>This would be an 
+					      introduction paragraph 
+					      about introducing 
+					      things.</p>
+					      &lt;div class="highlight"&gt;
+					        <p>Some important things
+					         to note:</p>
+				         <ol>
+			            <li>Thing 1</li>
+			            <li>Thing 2</li>
+			            <li>Thing 3</li>
+			            <li>Thing 4</li>
+				         </ol>
+				       &lt;/div&gt;
+						  &lt;/body&gt;
+						&lt;/html&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-redborder.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>The DIV</h2>
+					<div style="width: 80%; margin: auto; display:block;">
+					<p style="font-size: 30px;">Each <code>div</code> by default is rendered as a block level element.</p>
+					<p style="font-size: 30px;">Sections or parts of pages should be grouped in a <code>div</code> to allow for styling.</p>
+					<p style="font-size: 30px;"><code>div</code>s are mostly used to apply identical styles to multiple sections of a website.</p>
+				</div>
+				</section>
+
+				<section>
+					<h2>The DIV</h2>
+					<pre style="width: 60%; font-size: 20px;"><code class="html" data-trim>
+						&lt;div&gt;
+						  <p>Content</p>
+						  <p>Content</p>
+						&lt;/div&gt;
+						</code></pre>
+					<pre style="width: 60%; font-size: 20px;"><code class="html" data-trim>
+						&lt;div id="header"&gt;
+						  <h1>Main Header</h1>
+						  <p>Sub-heading paragraph</p>
+						&lt;/div&gt;
+						</code></pre>
+					<pre style="width: 60%; font-size: 20px;"><code class="html" data-trim>
+						&lt;div class="sub-content"&gt;
+						  <p>Content</p>
+						  <p>Content</p>
+						  <p>Content</p>
+						  <p>Content</p>
+						&lt;/div&gt;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>The DIV</h2>
+					<div style="width: 80%; margin: auto; display:block;">
+						<p style="font-size: 30px;">DIVs can also be used nested inside other DIVs (and commonly are used this way)</p>
+						<pre style="width: 60%; font-size: 20px;"><code class="html" data-trim>
+						&lt;div class="content"&gt;
+						  <p>Content</p>
+						  <p>Content</p>
+						  &lt;div class="callout"&gt;
+						    <ol>
+						       <li>List Item</li>
+						       <li>List Item</li>
+						       <li>List Item</li>
+						    </ol>
+						  &lt;/div&gt;
+						&lt;/div&gt;
+						</code></pre>
+				</div>
+				</section>
+
+				<section>
+					<h2>Grouping Elements with DIVs</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.align-right {
+						  text-align: right;
+						  color: purple;
+						  font-weight: bold;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 13px;"><code class="html" data-trim>
+						&lt;div class="align-right"&gt;
+						  <p>Lorem ipsum dolor sit amet, 
+						  consectetur adipisicing elit</p>
+						  <p>Sed do eiusmod tempor 
+						  incididunt ut labore et 
+						  dolore.</p>
+						&lt;/div&gt;
+						<p>Magna aliqua. Ut enim ad 
+						minim veniam.</p>
+						<p>Quis nostrud exercitation 
+						ullamco.</p>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-purple.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>HTML5</h2>
+					<p style="font-size: 30px;">In 2014, HTML5 was introduced. This applied to the following tags:</p>
+					<table style="font-size: 30px;">
+				    	<thead>
+					    	<tr>
+					            <th style="text-align: center;">HTML</th>
+					            <th style="text-align: center;">HTML5</th>
+					        </tr>
+				        </thead>
+				        <tbody>
+				        	<tr>
+					            <td style="border-bottom: 0px;">
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="header"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;header&gt;&lt;/header&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+				        	<tr>
+					            <td style="border-bottom: 0px;" >
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="navigation"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;nav&gt;&lt;/nav&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+				        	<tr>
+					            <td style="border-bottom: 0px;" >
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="article"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;article&gt;&lt;/article&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+				        	<tr>
+					            <td style="border-bottom: 0px;" >
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="section"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;section&gt;&lt;/section&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+				        	<tr>
+					            <td style="border-bottom: 0px;" >
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="main-content"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;main&gt;&lt;/main&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+				        	<tr>
+					            <td style="border-bottom: 0px;" >
+					            	<pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;div id="footer"&gt;&lt;/div&gt;
+								</code></pre>
+					            </td>
+					            <td style="border-bottom: 0px;">
+					            <pre style="font-size: 13px; width: 300px;"><code class="html" style="margin-bottom: -30px;" data-trim>
+					            	&lt;footer&gt;&lt;/footer&gt;
+								</code></pre>
+								</td>
+				        	</tr>
+					        
+				        </tbody>
+				    </table>
+				</section>
+
+				<section>
+					<img src="images/gif-11.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Group your content with some <code>div</code>s in your index.html file.</p>
+					<p style="font-size: 30px;">Create a header, content area, sidebar and a footer.</p>
+				</section>
+
+				<section>
+					<h2>HTML5 Example</h2>
+					<p style="font-size: 30px;">A page divided using HTML5 elements might look like this:</p>
+					<pre style="font-size: 13px; width: 60%;"><code class="html" data-trim>
+						&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+						  &lt;head&gt;
+						    &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+						  &lt;/head&gt;
+						  &lt;body&gt;
+						    &lt;header&gt;
+					        <h1>This would be an 
+					          introduction paragraph 
+					          about introducing 
+					          things.</h1>
+					      &lt;/header&gt;
+					      &lt;main&gt;
+					        <h2>Sub-Header</h2>
+					        <p>The main content area</p>
+					      &lt;/main&gt;
+					      &lt;aside&gt;
+					        <p>Some stuff in a sidebar</p>
+					      &lt;/aside&gt;
+					      &lt;footer&gt;
+					        <p>Footer Content</p>
+					      &lt;/footer&gt;
+						  &lt;/body&gt;
+						&lt;/html&gt;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>What if you wanted to highlight individual words?</h2>
+				</section>
+
+				<section>
+					<h2>The <code>span</code> Element</h2>
+					<p style="font-size: 30px;">The <code>span</code> element is rendered inline with text and wraps when it reaches the edge of the containing element. It is generally used to apply highlights to individual words in a paragraph or list.</p>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 14px;"><code class="css" data-trim>
+						.pink {
+						  color: pink;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>This paragraph wants to 
+						be <span class="pink">pink
+						</span>.</p>
+						<p><span class="pink">Me 
+						too!</span></p>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-spans.jpg">
+					</div>
+				</section>
+
+				<section>
+					<img src="images/gif-12.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Let's add some <code>span</code> elements <br/> to our content to help highlight some text.</p>
+				</section>
+
+				<section>
+					<h2>What about adding hover <br/>states to links?</h2>
+				</section>
+
+				<section>
+					<h2>Pseudo-Classes</h2>
+					<p style="font-size: 30px;">Pseudo-classes are a great way to target different "states" of a link or element. They are a <bold>special</bold> type of selector.</p>
+					<hr>
+					<p style="font-size: 30px;">For example, the <code class="pink">&lt;a href="link.html"&gt;</code> element has 4 "states":</p>
+					<code>
+					<p class="fragment fade-up">:active</p>
+					<p class="fragment fade-up">:focus</p>
+					<p class="fragment fade-up">:hover</p>
+					<p class="fragment fade-up">:visited</p>
+				</code>
+				</section>
+
+				<section>
+					<h2>Pseudo-Classes</h2>
+					<div class="third">
+						<p>CSS</p>
+					<pre style="font-size: 18px; width: 100%;"><code class="css" data-trim>
+						a:active {
+						  color:pink;
+						}
+						</code></pre>
+					<pre style="font-size: 18px; width: 100%;"><code class="css" data-trim>
+						a:focus {
+						  color:blue;
+						</code></pre>
+					<pre style="font-size: 18px; width: 100%;"><code class="css" data-trim>
+						a:hover {
+						  color:green;
+						}
+						</code></pre>
+					<pre style="font-size: 18px; width: 100%;"><code class="css" data-trim>
+						a:visited {
+						  color:purple;
+						}
+						</code></pre>
+					</div>
+					<div class="twothirds">
+						<p>State</p>
+						<p style="font-size: 25px; text-align: left; margin-left: 10%;">When clicking on a link, the button is <code class="pink">:active</code> when the button is depressed.</p>
+						<p style="font-size: 25px; text-align: left; margin-left: 10%;">Using the tab key to go through links on a page will <code class="pink">:focus</code> the link (and adding a blue glow by default)</p>
+						<p style="font-size: 25px; text-align: left; margin-left: 10%;">Using your mouse to hover over a link will trigger the <code class="pink">:hover</code> state of a link.</p>
+						<p style="font-size: 25px; text-align: left; margin-left: 10%;">Clicking a link, then navigating back to the page with the original link will display the link as <code class="pink">:visited</code></p>
+					</div>
+				</section>
+
+				<section>
+					<img src="images/gif-13.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Let's add hover states to your links using pseudo-classes.</p>
+				</section>
+
+				<section data-background-color="#ee5159" class="inverse">
+					<h1>THE BOX MODEL</h1>
+				</section>
+
+				<section>
+					<img src="images/chrome-redborder.jpg" style="width: 80%;" class="shadow">
+				</section>
+
+				<section>
+					<h2>What about styling a <br />link as a button?</h2>
+					<p style="font-size: 30px;">You can add margins, padding and even borders to any CSS element to give them room to breathe on the page.</p>
+				</section>
+
+				<section>
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-link.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-linklime.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-linkpad.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						}
+
+						.button:hover {
+						  background-color: pink;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-linkpink.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Padding Elements</h2>
+					<p style="font-size: 30px;">15px of padding on all sides</p>
+					<pre style="font-size: 20px; width: 30%;"><code class="css" data-trim>
+						padding: 15px;
+						</code></pre>
+					<p style="font-size: 30px;">15px of padding on the top</p>
+					<pre style="font-size: 20px; width: 30%;"><code class="css" data-trim>
+						padding-top: 15px;
+						</code></pre>
+					<p style="font-size: 30px;">10px on the top, 5px on the right, <br />3px on the bottom and 4px on the left</p>
+					<pre style="font-size: 20px; width: 40%;"><code class="css" data-trim>
+						padding: 10px 5px 3px 4px;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Padding Elements</h2>
+					<p style="font-size: 30px;">Adding padding to an element adds to the size of the element itself:</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						padding: 10px 20px 5px 7px;
+						</code></pre>
+					<img src="images/addingpadding.png" class="shadow">
+					<p class="fragment fade-up">This element is rendered as <strong class="pink">127 x 65px</strong></p>
+				</section>
+
+				<section>
+					<h2>Spacing Elements Out</h2>
+					<img class="shadow" style="margin-top: 0px;" src="images/chrome-links.jpg">
+				</section>
+
+				<section>
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						}
+
+						.button:hover {
+						  background-color: pink;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-links.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						  margin-left: 30px;
+						}
+
+						.button:hover {
+						  background-color: pink;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-margin.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Adding Margins</h2>
+					<p style="font-size: 30px;">Margins can be described as the space <br/>around elements that seperate them from other elements.</p>
+					<hr>
+					<p style="font-size: 30px;">15px margin on all sides</p>
+					<pre style="font-size: 20px; width: 30%;"><code class="css" data-trim>
+						margin: 15px;
+						</code></pre>
+					<p style="font-size: 30px;">15px margin on the top</p>
+					<pre style="font-size: 20px; width: 30%;"><code class="css" data-trim>
+						margin-top: 15px;
+						</code></pre>
+					<p style="font-size: 30px;">10px on the top, 5px on the right, <br />3px on the bottom and 4px on the left</p>
+					<pre style="font-size: 20px; width: 40%;"><code class="css" data-trim>
+						margin: 10px 5px 3px 4px;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Adding Margins to Elements</h2>
+					<p style="font-size: 30px;">The margin around an element is the transparent space that surrounds it:</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						padding: 10px 20px 5px 7px;
+						margin: 3px 3px 5px 3px;
+						</code></pre>
+					<img src="images/addingmargin.png" >
+					<p class="fragment fade-up">This element is rendered as <strong class="pink">127 x 65px</strong></p>
+				</section>
+
+				<section>
+					<h2>Centering Elements With Margins</h2>
+					<p style="font-size: 30px;">What if you wanted an equal margin on left and right?</p>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						  width: 100px;
+						  display: block;
+						  margin: auto;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-marginauto.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Shorthand Padding and Margin</h2>
+					<p style="font-size: 30px;">Declaring 4 values:</p>
+					<pre style="font-size: 20px; width: 50%;"><code class="css" data-trim>
+						padding: top right bottom left;
+						</code></pre>
+					<p style="font-size: 30px;">Declaring 2 values:</p>
+					<pre style="font-size: 20px; width: 50%;"><code class="css" data-trim>
+						padding: (top+bottom) (right+left);
+						</code></pre>
+					<p style="font-size: 30px;">Declaring 1 value:</p>
+					<pre style="font-size: 20px; width: 30%;"><code class="css" data-trim>
+						padding: all;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>What about adding borders?</h2>
+				</section>
+
+				<section data-transition="none">
+					<h2>Let's look at our page</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.button {
+						  background-color: lime;
+						  color: white;
+						  padding: 10px;
+						  text-decoration: none;
+						  margin-left: 30px;
+						  border: 1px solid red;
+						}
+
+						.button:hover {
+						  background-color: pink;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						&lt;a class="button" 
+						href="about.html"&gt;Link&lt;/a&gt;
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-border.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Adding Borders Around Elements</h2>
+					<p style="font-size: 30px;">The border style sits between the padding and <br />margin and <strong>also</strong> adds to the size of the element.</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						padding: 10px 20px 5px 7px;
+						margin: 3px 3px 5px 3px;
+						border: 1px solid red;
+						</code></pre>
+					<img src="images/addborder.png" style="width: 700px;">
+					<p class="fragment fade-up">This element is rendered as <strong class="pink">127 x 65px</strong></p>
+				</section>
+
+				<section>
+					<h2>Adding Borders</h2>
+					<p style="font-size: 30px;">Border styles can be written by listing out each attribute:</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						border-color: pink;
+						border-style: dotted;
+						border-width: 2px;
+						</code></pre>
+					<p style="font-size: 30px;" class="fragment fade-up">However, the industry standard is to use the shorthand declaration:</p>
+						<p class="fragment fade-up"><small style="margin-top: -10px; margin-bottom: -10px; display:block;">(size, style, style)</small></p>
+					<pre style="font-size: 24px; width: 50%;" class="fragment fade-up"><code class="css" data-trim>
+						border: 2px dotted pink;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Adding Borders</h2>
+					<p style="font-size: 30px;">You can also declare specifically where a border should be:</p>
+					<pre style="font-size: 24px; width: 70%;"><code class="css" data-trim>
+						border-left: 2px solid green;
+						border-bottom: 10px dotted #ff00ff;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Using Wrappers</h2>
+					<p style="font-size: 30px;">Using classes called <code class="pink">.wrappers</code> are commonly found wrapping <br/>around large groups of content. They are usually used for aligning the entirity of a page on a screen.</p>
+					<pre style="font-size: 24px; width: 70%;"><code class="css" data-trim>
+						div.wrapper {
+						  width: 100%;
+						  max-width: 1400px;
+						  margin: 0 auto;
+						}
+						</code></pre>
+				</section>
+
+				<section>
+					<img src="images/korywalton.jpg" class="shadow" style="width:600px; margin-top: -20px;">
+				</section>
+
+				<section>
+					<img src="images/gif-14.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Add some padding, borders and margins to your <code>divs</code>.</p>
+					<p style="font-size: 30px;">🌟 <strong class="pink">Bonus:</strong> center your content on your page.</p>
+				</section>
+
+				<section>
+					<h2>Declaring Width</h2>
+					<p style="font-size: 30px;">Sometimes you will want to declare the width of an element manually. Widths can be declared in percentages or pixels.</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						div#sidebar {
+						  width: 31%;
+						  padding: 1%;
+						  border: none;
+						}
+						</code></pre>
+						<p class="fragment fade-up"><small>⚠️ <strong>Remember</strong>: A browser reads the height and width of an element<br/> plus padding and border.</small></p>
+				</section>
+
+				<section>
+					<h2>Declaring Height</h2>
+					<p style="font-size: 30px;">Sometimes you will want to declare the height of an element manually. Heights can be declared in percentages or pixels.</p>
+					<pre style="font-size: 24px; width: 50%;"><code class="css" data-trim>
+						p.alert {
+						  height: 50px;
+						  padding: 5px;
+						  border: 2px solid red;
+						}
+						</code></pre>
+						<p class="fragment fade-up"><small>⚠️ <strong>Remember</strong>: A browser reads the height and width of an element<br/> plus padding and border.</small></p>
+				</section>
+
+				<section>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 13px;"><code class="css" data-trim>
+						.content {
+						  width: 200px;
+						  background-color: orange;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 12px;"><code class="html" data-trim>
+						<div class="content">
+        <p>Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Donec aliquet, odio ac egestas 
+        efficitur, orci odio blandit 
+        neque, quis elementum arcu 
+        velit sagittis libero. </p>
+      </div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-width.jpg">
+					</div>
+				</section>
+
+				<section>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 14px;"><code class="css" data-trim>
+						.content {
+						  width: 200px;
+						  background-color: orange;
+						}
+
+						.content p {
+						  width: 300px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 13px;"><code class="html" data-trim>
+						<div class="content">
+        <p>Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Donec aliquet, odio ac egestas 
+        efficitur, orci odio blandit 
+        neque, quis elementum arcu 
+        velit sagittis libero. </p>
+      </div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-toobig.jpg">
+					</div>
+				</section>
+
+				<section>
+					<img src="images/gif-15.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Add a width and height to some of your <code>divs</code>.</p>
+					<p style="font-size: 30px;">Use IDs to target HTML5 elements with CSS.</p>
+				</section>
+
+				<section data-background-color="#ee5159" class="inverse">
+					<h1>QUESTIONS?</h1>
+				</section>
+
+
+				
+
+				
+
+
+				
+
+
+
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			if( window.location.search.match( /print-pdf/gi ) ) {
+			    var link = document.createElement( 'link' );
+			    link.rel = 'stylesheet';
+			    link.type = 'text/css';
+			    link.href = 'reveal.js/css/print/pdf.css';
+			    document.getElementsByTagName( 'head' )[0].appendChild( link );
+			  }
+		</script>
+	</body>
+</html>

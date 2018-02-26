@@ -1,0 +1,1090 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to HTML/CSS - Class 4</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gdi.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+				<section>
+		          <img src="images/circle-gdi-logo.png" alt="GDI Logo" class="noborder">
+		          <h1>Intro to HTML/CSS</h1>
+		          <h3>Class 4</h3>
+		        </section>
+		        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		        <section data-background-color="#ee5159" class="inverse">
+					<h1>POSITIONING ELEMENTS</h1>
+				</section>
+
+				<section>
+					<h2>Positioning Elements</h2>
+					<p style="font-size: 30px;">There are many ways to position elements on your page. <br />We will take a look at the following:</p>
+					<p class="fragment fade-up">Static Positioning</p>
+					<p class="fragment fade-up">Absolute Positioning</p>
+					<p class="fragment fade-up">Relative Positioning</p>
+					<p class="fragment fade-up">Floating Elements</p>
+				</section>
+
+				<section>
+					<h2>Static Positioning</h2>
+					<p style="font-size: 30px;">By default, all HTML elements are statically positioned on a page.</p>
+				</section>
+
+				<section>
+					<h2>Inline Static Positioning</h2>
+					<div class="half">
+						<p>HTML</p>
+					<pre style="font-size: 18px; width: 60%;"><code class="html" data-trim>
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						<img src="cat.jpg" >
+						</code></pre>
+					</div>
+					<div class="half">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/static-cats.jpg">
+						<p class="caption"><a href="https://www.instagram.com/alex.crossman/">@alex.crossman</a></p>
+					</div>
+					<p style="font-size: 30px;">Notice how the cats flow from left <br />to right, wrapping to the next line when needed. This is because <code>img</code> is by default an inline element.</p>
+				</section>
+
+				<section>
+					<h2>Block Static Positioning</h2>
+					<p style="font-size: 30px;">Paragraphs are block-level elements. Therefore they do not wrap.</p> 
+					<div class="half">
+						<p>HTML</p>
+					<pre style="font-size: 18px; width: 60%;"><code class="html" data-trim>
+						<p>Greetings!</p>
+						<p>Hello!</p>
+						<p>Hi there!</p>
+						</code></pre>
+					</div>
+					<div class="half">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-ps.jpg">
+					</div>
+					<p style="font-size: 30px;">Notice how the paragraphs take a new line every time. This is because <code>p</code> is by default a block element.</p>
+				</section>
+
+				<section>
+					<h2>Relative Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="red">
+						  <p>I'm a red box.</p>
+						  <div class="green">
+						  	<p>I'm a green box.</p>
+						  </div>
+						</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-relativeinside.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Relative Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						  position: relative;
+						  left: 10px;
+						  top: 10px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="red">
+						  <p>I'm a red box.</p>
+						  <div class="green">
+						  	<p>I'm a green box.</p>
+						  </div>
+						</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-relative.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Relative Positioning</h2>
+					<p style="font-size: 30px;">Note the element must be inside the wrapping element to be relative to. <br />If not, the element will position itself to the next block-level item.</p>
+					</p>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						  position: relative;
+						  left: 10px;
+						  top: 10px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="red">
+						  <p>I'm a red box.</p>
+						</div>
+						<div class="green">
+						  <p>I'm a green box.</p>
+						</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-blocklevel.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Absolutely Positioning</h2>
+					<p style="font-size: 30px;">An element positioned absolutely will ignore the normal flow of elements on a page. It will position itself relative to the first block element that has position other than static. If no element is found, the container block becomes <code>html</code>.</p>
+				</section>
+
+				<section>
+					<h2>Absolute Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>Introduction text</p>
+						<div class="red">
+						  I'm a red box.
+						  <div class="green">
+						    I'm a green box.
+						  </div>
+						</div>
+						
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-stacked.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Absolute Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						  position: absolute;
+						  left: 50px;
+						  top: 0px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>Introduction text</p>
+						<div class="red">
+						  I'm a red box.
+						  <div class="green">
+						    I'm a green box.
+						  </div>
+						</div>
+						
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-breakout.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Absolute Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						  position: absolute;
+						  left: 50px;
+						  top: 0px;
+						}
+						.yellow {
+						  position: absolute;
+						  right: 20px;
+						  bottom: 0px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>Introduction text</p>
+						<div class="red">
+						  I'm a red box.
+						  <div class="green">
+						    I'm a green box.
+						  </div>
+						</div>
+						<div class="yellow">
+						  I'm a yellow box.
+						</div>
+						
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-3boxes.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Absolute Positioning</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  width: 300px;
+						}
+						.green {
+						  background-color: green;
+						  position: absolute;
+						  left: 50px;
+						  top: 0px;
+						}
+						.yellow {
+						  position: absolute;
+						  right: 20px;
+						  bottom: 0px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>Introduction text</p>
+						<div class="red">
+						  I'm a red box.
+						  <div class="green">
+						    I'm a green box.
+						  </div>
+						  <div class="yellow">
+						    I'm a yellow box.
+						  </div>
+						</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-3boxes.jpg">
+					</div>
+					<p class="fragment fade-up" style="font-size: 30px; display:inline-block;">Notice how moving the yellow div inside the red div does not affect where the yellow div is positioned on the page.</p>
+				</section>
+
+				<section>
+					<h2>Let's look at a real world example...</h2>
+				</section>
+
+				<section>
+					<h2>Adding a Caption</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.imgwrapper {
+						  width: 200px;
+						}
+						.imgwrapper p {
+						  
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="imgwrapper">
+						  <img src="cat.jpg">
+						  <p>This cat is adorable</p>
+						</div>
+						
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-caption1.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Adding a Caption</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.imgwrapper {
+						  width: 200px;
+						}
+						.imgwrapper p {
+						  background-color: #fff9ba;
+						  position: relative;
+						  top: -30px;
+						  left: 4px;
+						  width: 130px;
+						  border: 2px solid white;
+						  color: #e841b2;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="imgwrapper">
+						  <img src="cat.jpg">
+						  <p>This cat is adorable</p>
+						</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-caption2.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Overlapping Elements</h2>
+					<p style="font-size: 30px;">Sometimes elements will overlap. You can change the stack order by adjusting the <code>z-index</code>. Elements with the highest <code>z-index</code> go on top.</p>
+					<img src="images/firefox3d.jpg" class="shadow" style="width:600px;">
+					<p style="margin: 0px;"><small>CNN.com in Firefox's 3d Inspector</small></p>
+				</section>
+
+				<section>
+					<h2>Overlapping Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.pink {
+						  background-color: pink;
+						  position: absolute;
+						  left: 10px;
+						  top: 10px;
+						  width: 100px;
+						  height: 100px;
+						}
+						.blue {
+						  background-color: blue;
+						  position: absolute;
+						  left: 20px;
+						  top: 25px;
+						  width: 100px;
+						  height: 100px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="pink"></div>
+						<div class="blue"></div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-overlapping.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Overlapping Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.pink {
+						  background-color: pink;
+						  position: absolute;
+						  left: 10px;
+						  top: 10px;
+						  width: 100px;
+						  height: 100px;
+						  z-index: 10;
+						}
+						.blue {
+						  background-color: blue;
+						  position: absolute;
+						  left: 20px;
+						  top: 25px;
+						  width: 100px;
+						  height: 100px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="pink"></div>
+						<div class="blue"></div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-overlappingpink.jpg">
+					</div>
+				</section>
+
+				<section>
+					<img src="images/gif-16.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">Let's add some positioning to elements on your page.</p>
+					<p style="font-size: 30px;">See if you can create a div that contain an image and a caption that is positioned overtop the image.</p>
+				</section>
+
+				<section>
+					<h2>Floating Elements</h2>
+					<div class="half shadow">
+						<img src="images/example-floatbq.png">
+					</div>
+					<div class="half shadow">
+						<img src="images/gdi-float.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Floating Elements</h2>
+					<p>Applying a float to an element essentially takes it out of the normal flow and "floats" it either as far left or as far right as its containing element will allow.</p>
+					<p>It should also be noted that other elements, such as paragraphs or lists, will inherently wrap around a floating element.</p>
+				</section>
+
+				<section>
+					<h2>Floating Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.yellow {
+						  background-color: yellow;
+						  padding: 10px;
+						  width: 100px;
+						  float: left;
+						}
+						p {
+						  font-size: 12px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="yellow">
+						This box is yellow</div>
+
+						<p>Lorem ipsum dolor sit amet, 
+						consectetur adipiscing elit. 
+						Praesent justo mauris, commodo 
+						ac nulla quis, maximus venatis 
+						ipsum. Integer pretium urna 
+						vitae dolor consectetur, in 
+						tempor nisi venenatis. Aliquam 
+						erat volutpat. Duis mauris dui, 
+						tincidunt et felis quis, ulices 
+						porttitor odio. Proin egestas 
+						odio arcu, vitae convall velit 
+						sagittis quis. Duis nec odio 
+						sodales arcu accumsan lobortis 
+						id nec urna. Nunc ut diam 
+						sollicitudin, euismod sapien 
+						nec, ullamcorper diam. 
+						Nunc nec eleifend sapien.</p>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-floatyellow.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.yellow {
+						  background-color: yellow;
+						  padding: 10px;
+						  width: 100px;
+						  float: left;
+						  margin-bottom: 10px;
+						  margin-right: 20px;
+						}
+						p {
+						  font-size: 12px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<div class="yellow">
+						This box is yellow</div>
+
+						<p>Lorem ipsum dolor sit amet, 
+						consectetur adipiscing elit. 
+						Praesent justo mauris, commodo 
+						ac nulla quis, maximus venatis 
+						ipsum. Integer pretium urna 
+						vitae dolor consectetur, in 
+						tempor nisi venenatis. Aliquam 
+						erat volutpat. Duis mauris dui, 
+						tincidunt et felis quis, ulices 
+						porttitor odio. Proin egestas 
+						odio arcu, vitae convall velit 
+						sagittis quis. Duis nec odio 
+						sodales arcu accumsan lobortis 
+						id nec urna. Nunc ut diam 
+						sollicitudin, euismod sapien 
+						nec, ullamcorper diam. 
+						Nunc nec eleifend sapien.</p>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-yellowspacing.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.yellow {
+						  background-color: yellow;
+						  padding: 10px;
+						  width: 100px;
+						  float: left;
+						  margin-bottom: 10px;
+						  margin-right: 20px;
+						}
+						p {
+						  font-size: 12px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 14px;"><code class="html" data-trim>
+						<p>Lorem ipsum dolor sit amet, 
+						consectetur adipiscing elit. 
+						Praesent justo mauris, commodo 
+						ac nulla quis, maximus venatis 
+						ipsum. Integer pretium urna 
+						vitae dolor consectetur, in 
+						tempor nisi venenatis. Aliquam 
+						erat volutpat. Duis mauris dui, 
+						tincidunt et felis quis, ulices 
+						porttitor odio. Proin egestas 
+						odio arcu, vitae convall velit 
+						sagittis quis. Duis nec odio 
+						sodales arcu accumsan lobortis 
+						id nec urna. Nunc ut diam 
+						sollicitudin, euismod sapien 
+						nec, ullamcorper diam. 
+						Nunc nec eleifend sapien.</p>
+						<div class="yellow">
+						  This box is yellow</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-yellowbottom.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Floating Elements Side By Side</h2>
+					<p>Let's think about the browser below:</p>
+					<img src="images/chrome-centered.jpg" style="width: 70%;" class="shadow">
+				</section>
+
+				<section>
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="red">Red Box</div>
+						<div class="orange">
+						Orange Box</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-redorange.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="red">Red Box</div>
+						<div class="orange">
+						Orange Box</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-floatred.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: right;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="red">Red Box</div>
+						<div class="orange">
+						Orange Box</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-floatright.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="red">Red Box</div>
+						<div class="orange">
+						Orange Box</div>
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-orng.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						.container {
+						  background-color: yellow;
+						  width: 300px;
+						  height: 200px;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="container">
+						  <div class="red">Red 
+						    Box</div>
+						  <div class="orange">
+						    Orange Box</div>
+					 </div>
+
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-boxes.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Floating Elements Side By Side</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						.container {
+						  background-color: yellow;
+						  width: 300px;
+						  height: 200px;
+						  margin: auto;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="container">
+						  <div class="red">Red 
+						    Box</div>
+						  <div class="orange">
+						    Orange Box</div>
+					 </div>
+
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-centered.jpg">
+					</div>
+				</section>
+
+				<section>
+					<h2>Clearing Floats</h2>
+					<p style="font-size: 30px;">You might want some elements to float, but other<br/> elements to start a new line. You can use a <code class="pink">clear</code> to achieve this:</p>
+					<pre style="font-size: 18px; width: 30%;"><code class="css" data-trim>
+						clear: left;
+						</code></pre>
+					<pre style="font-size: 18px; width: 30%;"><code class="css" data-trim>
+						clear: right;
+						</code></pre>
+					<pre style="font-size: 18px; width: 30%;"><code class="css" data-trim>
+						clear: both;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Clearing Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						.container {
+						  background-color: yellow;
+						  width: 300px;
+						  height: 200px;
+						  margin: auto;
+						}
+						.green {
+						  background-color: green;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="container">
+						  <div class="red">Red 
+						    Box</div>
+						  <div class="orange">
+						    Orange Box</div>
+						  <div class="green">
+						    Green Box</div>
+					 </div>
+
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-clear.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Clearing Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						.container {
+						  background-color: yellow;
+						  width: 300px;
+						  height: 200px;
+						  margin: auto;
+						}
+						.green {
+						  background-color: green;
+						  clear: right;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="container">
+						  <div class="red">Red 
+						    Box</div>
+						  <div class="orange">
+						    Orange Box</div>
+						  <div class="green">
+						    Green Box</div>
+					 </div>
+
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-clear.jpg">
+					</div>
+				</section>
+
+				<section data-transition="none">
+					<h2>Clearing Elements</h2>
+					<div class="third">
+						<p>CSS</p>
+						<pre style="font-size: 15px;"><code class="css" data-trim>
+						.red {
+						  background-color: red;
+						  padding: 10px;
+						  float:left;
+						}
+						.orange {
+						  background-color: orange;
+						  padding: 10px;
+						  float: left;
+						}
+						.container {
+						  background-color: yellow;
+						  width: 300px;
+						  height: 200px;
+						  margin: auto;
+						}
+						.green {
+						  background-color: green;
+						  clear: left;
+						}
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>HTML</p>
+					<pre style="font-size: 15px;"><code class="html" data-trim>
+						<div class="container">
+						  <div class="red">Red 
+						    Box</div>
+						  <div class="orange">
+						    Orange Box</div>
+						  <div class="green">
+						    Green Box</div>
+					 </div>
+
+						</code></pre>
+					</div>
+					<div class="third">
+						<p>Browser</p>
+						<img class="shadow" style="margin-top: 0px;" src="images/chrome-clear2.jpg">
+					</div>
+				</section>
+
+				<section>
+					<img src="images/gif-17.gif" style="width: 300px;">
+					<h2>Let's Develop it!</h2>
+					<p style="font-size: 30px;">See if you can float your sidebar or other content areas.</p>
+				</section>
+
+				<section data-background-color="#ee5159" class="inverse">
+					<h1>QUESTIONS?</h1>
+				</section>
+
+
+				
+
+
+
+				
+
+				
+
+
+				
+
+
+
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			if( window.location.search.match( /print-pdf/gi ) ) {
+			    var link = document.createElement( 'link' );
+			    link.rel = 'stylesheet';
+			    link.type = 'text/css';
+			    link.href = 'reveal.js/css/print/pdf.css';
+			    document.getElementsByTagName( 'head' )[0].appendChild( link );
+			  }
+		</script>
+	</body>
+</html>
