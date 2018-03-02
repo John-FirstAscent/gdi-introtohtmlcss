@@ -26,7 +26,7 @@
 			<div class="slides">
 			<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 				<section>
-		          <img src="images/circle-gdi-logo.png" alt="GDI Logo" class="noborder">
+		          <img src="images/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="width: 40%;">
 		          <h1>Intro to HTML/CSS</h1>
 		          <h3>Class 1</h3>
 		        </section>
@@ -211,7 +211,7 @@
 
 				<section>
 					<h2>Anatomy of a Website</h2>
-					<p>A website is a way to present your content to the world. HTML is used to present that content while CSS is used to make it visually pleasing to a user.</p>
+					<p style="font-size: 30px; width: 70%; margin:auto;">A website is a way to present your content to the world. HTML is used to present that content while CSS is used to make it visually pleasing to a user.</p>
 				</section>
 
 				<section>
@@ -301,7 +301,7 @@
 
 				<section>
 					<h2>Container Elements</h2> 
-					<div class="quarter">
+					<div class="quarter" style="text-align: right;">
 						<p>Paragraphs</p>
 						<p>Links</p>
 						<p>Ordered Lists</p>
@@ -327,11 +327,11 @@
 
 				<section>
 					<h2>Stand Alone Elements</h2>
-					<div class="half">
+					<div style="width: 100%; margin:auto; display:block; margin-left:-100px;">
+					<div class="half" style="text-align: right;">
 						<p>Images</p>
 						<p>Horizontal Rule</p>
 						<p>Line Break</p>
-						
 					</div>
 					<div class="half" style="margin-top: 10px;">
 						<pre style="display:inline-block;"><code class="html" data-trim data-src>
@@ -344,6 +344,7 @@
 							<br>
 						</code></pre>
 					</div>
+				</div>
 				</section>
 
 				<section>
@@ -372,7 +373,7 @@
 
 				<section>
 					<h2>Doctype</h2>
-					<p>The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the page is using.</p>
+					<p style="font-size: 30px;">The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the page is using.</p>
 					<pre><code class="html" data-trim>
 						&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML
 						4.01 Transitional//EN" "http://
@@ -386,7 +387,7 @@
 
 				<section>
 					<h2>HTML Tag</h2>
-					<p>The page must contain a set of HTML tags. All page content will be nested inside these HTML tags.</p>
+					<p >The page must contain a set of HTML tags. All page content will be nested inside these HTML tags.</p>
 					<p>
 					<pre style="width: 50%;"><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -412,7 +413,7 @@
 
 				<section>
 					<h2>Body</h2>
-					<p>The body contains the actual content of the page. <br/>Everything that is contained in the body <br/>is visible to the user.</p>
+					<p style="font-size: 30px;">The body contains the actual content of the page. <br/>Everything that is contained in the body <br/>is visible to the user.</p>
 
 					<pre style="width: 50%;"><code class="html" data-trim>
 						&lt;!DOCTYPE html&gt;
@@ -678,19 +679,19 @@
 					</code></pre>
 					<p>Links can have many components:</p>
 					<ol style="width:80%;">
-						<li class="fragment fade-up"><strong class="pink">a</strong> tag:<pre class="html" style="font-size: 17px; text-align: center; width: 150px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+						<li class="fragment fade-up"><strong class="pink">a</strong> tag:<pre class="html" style="font-size: 17px; width: 150px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
 							<a>...</a>
 					</code></pre></li>
-					<li class="fragment fade-up"><strong class="pink">href</strong> attribute: <pre class="html" style="font-size: 17px; text-align: center; width: 500px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+					<li class="fragment fade-up"><strong class="pink">href</strong> attribute: <pre class="html" style="font-size: 17px; width: 500px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
 							href="http://www.girldevelopit.com"
 					</code></pre></li>
-					<li class="fragment fade-up"><strong class="pink">title</strong> attribute: <pre class="html" style="font-size: 17px; text-align: center; width: 300px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+					<li class="fragment fade-up"><strong class="pink">title</strong> attribute: <pre class="html" style="font-size: 17px; width: 300px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
 							title="Girl Develop It"
 					</code></pre></li>
-					<li class="fragment fade-up"><strong class="pink">alt</strong> text: <pre class="html" style="font-size: 17px; text-align: center; width: 300px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+					<li class="fragment fade-up"><strong class="pink">alt</strong> text: <pre class="html" style="font-size: 17px; width: 300px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
 							alt="Girl Develop It"
 					</code></pre></li>
-					<li class="fragment fade-up">window <strong class="pink">target</strong>:<pre class="html" style="font-size: 17px; text-align: center; width: 200px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
+					<li class="fragment fade-up">window <strong class="pink">target</strong>:<pre class="html" style="font-size: 17px; width: 200px; display:inline-block; margin-left:10px;margin-bottom:0px;"><code data-trim>
 							target="_blank"
 					</code></pre></li>
 					</ol>
